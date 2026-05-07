@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>학생 포트폴리오</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Pretendard', sans-serif;
+    }
+
+    body{
+      background:#f5f7fb;
+      color:#333;
+      line-height:1.6;
+    }
+
+    header{
+      height:100vh;
+      background:linear-gradient(135deg,#4f46e5,#7c3aed);
+      color:white;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    header h1{
+      font-size:4rem;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:1.2rem;
+      opacity:0.9;
+    }
+
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:white;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+      z-index:100;
+    }
+
+    nav ul{
+      display:flex;
+      justify-content:center;
+      list-style:none;
+      padding:15px;
+      gap:30px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#333;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#6d28d9;
+    }
+
+    section{
+      max-width:1100px;
+      margin:auto;
+      padding:100px 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.5rem;
+      margin-bottom:50px;
+      color:#4f46e5;
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 2fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .profile-img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+    }
+
+    .skill-card{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .skill-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .project-card{
+      background:white;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .project-card:hover{
+      transform:scale(1.03);
+    }
+
+    .project-card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+
+    .project-content{
+      padding:20px;
+    }
+
+    .contact{
+      text-align:center;
+    }
+
+    .contact a{
+      display:inline-block;
+      margin:10px;
+      padding:12px 24px;
+      background:#4f46e5;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      transition:0.3s;
+    }
+
+    .contact a:hover{
+      background:#7c3aed;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      background:#111827;
+      color:white;
+    }
+
+    @media(max-width:768px){
+      header h1{
+        font-size:2.5rem;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      nav ul{
+        gap:15px;
+        font-size:14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#about">소개</a></li>
+      <li><a href="#skills">기술</a></li>
+      <li><a href="#projects">프로젝트</a></li>
+      <li><a href="#contact">연락처</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    <h1>홍길동</h1>
+    <p>Creative Student Portfolio</p>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="section-title">ABOUT ME</h2>
+
+    <div class="about">
+      <img 
+        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop"
+        alt="profile"
+        class="profile-img"
+      >
+
+      <div>
+        <h3>안녕하세요 👋</h3>
+        <p>
+          저는 웹 개발과 디자인에 관심이 많은 학생입니다.
+          새로운 기술을 배우고 창의적인 프로젝트를 만드는 것을 좋아합니다.
+        </p>
+
+        <br>
+
+        <p>
+          HTML, CSS, JavaScript를 활용하여 다양한 웹 페이지를 제작하고 있으며,
+          사용자 경험(UX)을 중요하게 생각합니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2 class="section-title">SKILLS</h2>
+
+    <div class="skills">
+      <div class="skill-card">
+        <h3>HTML</h3>
+        <p>웹 구조 설계</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>CSS</h3>
+        <p>반응형 UI 디자인</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>JavaScript</h3>
+        <p>인터랙션 구현</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>Python</h3>
+        <p>기초 프로그래밍</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">PROJECTS</h2>
+
+    <div class="projects">
+
+      <div class="project-card">
+        <img src="https://picsum.photos/500/300?1" alt="">
+        <div class="project-content">
+          <h3>Portfolio Website</h3>
+          <p>
+            HTML/CSS 기반의 개인 포트폴리오 웹사이트 제작
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://picsum.photos/500/300?2" alt="">
+        <div class="project-content">
+          <h3>Todo App</h3>
+          <p>
+            JavaScript를 활용한 일정 관리 웹앱 개발
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://picsum.photos/500/300?3" alt="">
+        <div class="project-content">
+          <h3>Team Project</h3>
+          <p>
+            팀 프로젝트를 통한 협업 경험 및 발표 진행
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">CONTACT</h2>
+
+    <div class="contact">
+      <p>Email : example@email.com</p>
+      <p>GitHub : github.com/example</p>
+
+      <a href="#">GitHub</a>
+      <a href="#">Instagram</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2026 Student Portfolio. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
